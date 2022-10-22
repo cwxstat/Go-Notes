@@ -12,8 +12,7 @@ type FooError struct {
 	Err      error
 }
 
-func ErrorCreator() *FooError {
-
+func ErrorCreator() error {
 	return &FooError{
 		Op:       "was eating miso soup",
 		FooThing: "just happend",
