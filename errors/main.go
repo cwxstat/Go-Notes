@@ -28,6 +28,7 @@ func (e *FooError) Unwrap() error { return e.Err }
 
 func (e *FooError) Thing() string { return e.FooThing }
 
+// The key here is to use "errors.As" to check if the error is of type FooError
 func main() {
 	if err := ErrorCreator(); err != nil {
 		var fooError *FooError
