@@ -13,9 +13,10 @@ type FooError struct {
 }
 
 // ErrorCreator creates an error, which is an interface, so we can return *FooError as error
-//    type error interface {
-//	       Error() string
-//     }
+//
+//	   type error interface {
+//		       Error() string
+//	    }
 func ErrorCreator() error {
 	return &FooError{
 		Op:       "was eating miso soup",
